@@ -1,0 +1,276 @@
+/* Rodger Lutalo, personal site. One shared stylesheet. No external resources. */
+
+:root {
+  --ink: #1c2430;
+  --muted: #4d5a6a;
+  --accent: #1f3a5f;
+  --accent-soft: #eef2f7;
+  --line: #d9dee5;
+  --paper: #ffffff;
+  --wash: #f7f9fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+  text-decoration-thickness: 2px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 1.55rem;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+section {
+  padding: 34px 0 6px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul.plain {
+  margin: 0 0 14px;
+  padding-left: 20px;
+}
+
+ul.plain li {
+  margin-bottom: 8px;
+}
+
+/* Draft notice (draft builds only, removed at publish) */
+.draft-note {
+  background: var(--wash);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+/* Hero */
+.hero {
+  padding: 48px 0 10px;
+  text-align: left;
+}
+
+.hero-photo {
+  width: 168px;
+  height: 168px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+}
+
+.descriptor {
+  font-size: 1.13rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 8px;
+  max-width: 46em;
+}
+
+.credentials-line {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.hero-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 6px;
+}
+
+.hero-links a {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 7px 16px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hero-links a:hover,
+.hero-links a:focus {
+  background: var(--accent-soft);
+}
+
+/* Pillars */
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.pillar {
+  background: var(--wash);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.pillar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* Articles index */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.article-list li {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.article-list li:first-child {
+  padding-top: 2px;
+}
+
+.article-list a {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.article-list p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+/* Article pages */
+.article-header {
+  padding: 40px 0 4px;
+}
+
+.article-header h1 {
+  font-size: 2rem;
+  margin: 0 0 10px;
+}
+
+.byline {
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+.article-body h2 {
+  font-size: 1.3rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 26px 0 10px;
+}
+
+.top-link {
+  font-size: 0.92rem;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 44px;
+  padding: 26px 0 40px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+footer .foot-name {
+  color: var(--ink);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+footer nav {
+  margin-top: 10px;
+}
+
+footer nav a {
+  margin-right: 18px;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding-top: 34px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .article-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    width: 132px;
+    height: 132px;
+  }
+}
